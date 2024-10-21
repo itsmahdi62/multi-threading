@@ -41,14 +41,13 @@ public class ConvertorService {
         double accountLimit = Double.parseDouble(fields[4].replace("$", "").trim());
         String accountOpenDate = fields[5].trim();
         double accountBalanceDouble = Double.parseDouble(fields[6].replace("$", "").trim());
-        long accountBalance = (long) accountBalanceDouble;
 
         return Account.builder()
                 .accountNumber(accountNumber)
                 .accountType(accountType)
                 .accountLimit(accountLimit)
                 .accountOpenDate(accountOpenDate)
-                .accountBalance(accountBalance)
+                .accountBalance(accountBalanceDouble)
                 .customerId(customer_id)
                 .build();
     }

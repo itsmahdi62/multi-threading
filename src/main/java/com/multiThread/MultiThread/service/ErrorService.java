@@ -38,7 +38,6 @@ public class ErrorService {
 
             // write the updated error list to the file
             objectMapper.writeValue(file, existingErrors);
-            System.out.println("Errors have been updated in the json file.");
         } catch (JsonParseException | JsonMappingException e) {
             System.err.println("Error parsing the JSON file: " + e.getMessage());
         } catch (IOException e) {

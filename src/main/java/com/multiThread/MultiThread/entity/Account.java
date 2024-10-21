@@ -36,8 +36,8 @@ public class Account implements Serializable {
 
     @NotNull(message = "Account balance is Empty !")
     @Min(value = 1000 , message = "Account Balance must NOT be NULL!")
-    private Long accountBalance;
+    private double accountBalance;
 
-    @NotNull(message = "In account, customer-Id is Empty !")
+
     private Long customerId ;
 }

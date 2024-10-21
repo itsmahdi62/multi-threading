@@ -81,9 +81,13 @@ public class FileService {
                 Account account = convertorService.accountConvertor(line);
                 List<Error> errorList = validatorService.validateAccount(account);
                 if(errorList.isEmpty()){
+                    System.out.println("No errors found for account: " + account.getAccountNumber());
+
                     // do not forget to add encryption here
                     accountRepository.save(account);
                 }else {
+                    System.out.println("Errors found for account: " + account.getAccountNumber() + " -> " + errorList);
+
                     errorService.writeErrors(errorList);
                 }
             }
