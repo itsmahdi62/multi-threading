@@ -1,0 +1,218 @@
+[ {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 1,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "AccountDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : null,
+  "error_CODE" : "VALIDATION_ERROR",
+  "error_DESCRIPTION" : "Account number must be 22 digits",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "AccountDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : null,
+  "error_CODE" : "VALIDATION_ERROR",
+  "error_DESCRIPTION" : "Account Balance must NOT be NULL!",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "AccountDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : null,
+  "error_CODE" : "VALIDATION_ERROR",
+  "error_DESCRIPTION" : "Account number is Empty ! ",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "AccountDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : null,
+  "error_CODE" : "BALANCE_LIMIT_ERROR",
+  "error_DESCRIPTION" : "Balance must be greater than the account limit",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 3,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 4,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 5,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 6,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 7,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 8,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 9,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 10,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 11,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 12,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 13,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 14,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 15,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 16,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 17,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 18,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 19,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 21,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 22,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 22,
+  "error_CODE" : "VALIDATION_ERROR",
+  "error_DESCRIPTION" : "Customer surname is Empty !",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 23,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 24,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 25,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 26,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 28,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+}, {
+  "file_NAME" : "CustomerDataFile",
+  "error_DATE" : "2024-10-21",
+  "record_NUMBER" : 29,
+  "error_CODE" : "BIRTHDATE_INVALID",
+  "error_DESCRIPTION" : "BirthDate is null or before 1995",
+  "error_CLASSIFICATION_NAME" : "Validation Error"
+} ]

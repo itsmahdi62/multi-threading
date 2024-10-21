@@ -1,14 +1,14 @@
 package com.multiThread.MultiThread.entity;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 
 @Setter
 @Getter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Error implements Serializable {
     private String FILE_NAME;
     private Long RECORD_NUMBER;
