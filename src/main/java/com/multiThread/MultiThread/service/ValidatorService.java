@@ -2,6 +2,7 @@ package com.multiThread.MultiThread.service;
 
 import com.multiThread.MultiThread.entity.Account;
 import com.multiThread.MultiThread.entity.Customer;
+import com.multiThread.MultiThread.entity.Error;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
 import lombok.AllArgsConstructor;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -18,21 +21,46 @@ public class ValidatorService {
 
     private final Validator validator ;
 
-    public String validateCustomer(Customer customer){
-        String listOfErrors = "";
+    public List<Error> validateCustomer(Customer customer){
+        List<Error> errorList = new ArrayList<>();
 
         Set<ConstraintViolation<Customer>> violations = validator.validate(customer);
 
-        if(!isBirthDateValid(customer.getCustomerBirthDate())){
-            listOfErrors += "BirthDate is null of or before 1995 #\n";
+        Long customerId = customer.getCustomerId();  // Assuming this field exists in the Customer entity
+
+        if (!isBirthDateValid(customer.getCustomerBirthDate())) {
+            // Create an Error object for the invalid birth-date
+            Error birthDateError = Error.builder()
+                    .FILE_NAME("CustomerDataFile")
+                    .RECORD_NUMBER(customerId)  // Use customer_id here
+                    .ERROR_CODE("BIRTHDATE_INVALID")
+                    .ERROR_CLASSIFICATION_NAME("Validation Error")
+                    .ERROR_DESCRIPTION("BirthDate is null or before 1995")
+                    .ERROR_DATE(LocalDate.now().toString())  // Example date
+                    .build();
+
+            // Add to error list
+            errorList.add(birthDateError);
         }
 
+        // Add constraint violations to error list
         if (!violations.isEmpty()) {
             for (ConstraintViolation<Customer> violation : violations) {
-                listOfErrors += violation.getMessage() + " \n#";
+                Error validationError = Error.builder()
+                        .FILE_NAME("CustomerDataFile")
+                        .RECORD_NUMBER(customerId)  // Use customer_id here
+                        .ERROR_CODE("VALIDATION_ERROR")
+                        .ERROR_CLASSIFICATION_NAME("Validation Error")
+                        .ERROR_DESCRIPTION(violation.getMessage())
+                        .ERROR_DATE(LocalDate.now().toString())  // Example date
+                        .build();
+
+                // Add each violation to error list
+                errorList.add(validationError);
             }
         }
-        return listOfErrors;
+        // Optional: return the error list for further processing
+        return errorList;
     }
 
     private boolean isBirthDateValid(String customerBirthDate) {
@@ -52,23 +80,55 @@ public class ValidatorService {
     }
 
 
-    public String validateAccount(Account account) {
-        String listOfErrors = "";
+    public List<Error> validateAccount(Account account) {
+        List<Error> errorList = new ArrayList<>();
+
         Set<ConstraintViolation<Account>> violations = validator.validate(account);
+
+        Long accountId = account.getId();
 
         if (!violations.isEmpty()) {
             for (ConstraintViolation<Account> violation : violations) {
-                listOfErrors += violation.getMessage() + "\n#";
+                Error validationError = Error.builder()
+                        .FILE_NAME("AccountDataFile")
+                        .RECORD_NUMBER(accountId)
+                        .ERROR_CODE("VALIDATION_ERROR")
+                        .ERROR_CLASSIFICATION_NAME("Validation Error")
+                        .ERROR_DESCRIPTION(violation.getMessage())
+                        .ERROR_DATE(LocalDate.now().toString())
+                        .build();
+
+                errorList.add(validationError);
             }
         }
 
-        if (account.getAccountBalance() < account.getAccountLimit()){
-            listOfErrors += "Balance must be greater than limit #\n";
+        if (account.getAccountBalance() < account.getAccountLimit()) {
+            Error balanceError = Error.builder()
+                    .FILE_NAME("AccountDataFile")
+                    .RECORD_NUMBER(accountId)
+                    .ERROR_CODE("BALANCE_LIMIT_ERROR")
+                    .ERROR_CLASSIFICATION_NAME("Validation Error")
+                    .ERROR_DESCRIPTION("Balance must be greater than the account limit")
+                    .ERROR_DATE(LocalDate.now().toString())
+                    .build();
+
+            errorList.add(balanceError);
         }
 
         if (account.getAccountType() == 0 || account.getAccountType() > 3) {
-            listOfErrors += "Account type should be type 1 , 2 or 3 , #\n";
+            Error accountTypeError = Error.builder()
+                    .FILE_NAME("AccountDataFile")
+                    .RECORD_NUMBER(accountId)
+                    .ERROR_CODE("ACCOUNT_TYPE_ERROR")
+                    .ERROR_CLASSIFICATION_NAME("Validation Error")
+                    .ERROR_DESCRIPTION("Account type should be 1, 2, or 3")
+                    .ERROR_DATE(LocalDate.now().toString())
+                    .build();
+
+            errorList.add(accountTypeError);
         }
-        return listOfErrors;
+
+        return errorList;
     }
+
 }

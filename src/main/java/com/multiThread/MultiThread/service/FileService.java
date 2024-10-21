@@ -2,6 +2,7 @@ package com.multiThread.MultiThread.service;
 
 import com.multiThread.MultiThread.entity.Account;
 import com.multiThread.MultiThread.entity.Customer;
+import com.multiThread.MultiThread.entity.Error;
 import com.multiThread.MultiThread.repository.AccountRepository;
 import com.multiThread.MultiThread.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.io.*;
+import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -54,14 +56,13 @@ public class FileService {
             while ((line = reader.readLine()) != null) {
                 // convert each line to an entity
                 Customer customer = convertorService.customerConverter(line);
-                String listOfValidationErrors = validatorService.validateCustomer(customer);
-                
-                if(listOfValidationErrors.equals("")){
+                List<Error> errorList = validatorService.validateCustomer(customer);
+
+                if(errorList.isEmpty()){
                     // do not forget to add encryption here
                     customerRepository.save(customer);
-                }else{
-                    errorService.writeErrors(listOfValidationErrors);
-                    System.out.println(listOfValidationErrors);
+                }else {
+                    errorService.writeErrors(errorList);
                 }
             }
         } catch (IOException e) {
@@ -78,13 +79,12 @@ public class FileService {
             line = reader.readLine();
             while ((line = reader.readLine()) != null) {
                 Account account = convertorService.accountConvertor(line);
-                String listOfValidationErrors = validatorService.validateAccount(account);
-                if(listOfValidationErrors.equals("")){
+                List<Error> errorList = validatorService.validateAccount(account);
+                if(errorList.isEmpty()){
                     // do not forget to add encryption here
                     accountRepository.save(account);
-                }else{
-                    errorService.writeErrors(listOfValidationErrors);
-                    System.out.println(listOfValidationErrors);
+                }else {
+                    errorService.writeErrors(errorList);
                 }
             }
         } catch (IOException e) {
